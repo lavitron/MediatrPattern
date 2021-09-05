@@ -1,7 +1,7 @@
-﻿using FluentValidation.AspNetCore;
+﻿using System;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 using TokenInfrastructure.Middleware;
 
 namespace TokenInfrastructure.DependencyInjection

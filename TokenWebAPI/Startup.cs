@@ -24,7 +24,7 @@ namespace TokenWebAPI
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "TokenWebAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo {Title = "TokenWebAPI", Version = "v1"});
             });
         }
 

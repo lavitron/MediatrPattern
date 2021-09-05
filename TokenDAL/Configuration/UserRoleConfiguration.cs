@@ -15,7 +15,6 @@ namespace TokenDAL.Configuration
 
             builder.HasOne(p => p.RoleFk).WithMany(p => p.UserRoles).HasForeignKey(p => p.RoleId);
             builder.HasOne(p => p.UserFk).WithMany(p => p.UserRoles).HasForeignKey(p => p.UserId);
-
         }
     }
 }

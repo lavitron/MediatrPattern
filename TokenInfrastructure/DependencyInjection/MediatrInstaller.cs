@@ -1,6 +1,6 @@
-﻿using MediatR;
+﻿using System;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace TokenInfrastructure.DependencyInjection
 {
@@ -11,6 +11,5 @@ namespace TokenInfrastructure.DependencyInjection
             var assembler = AppDomain.CurrentDomain.Load("TokenBusiness");
             services.AddMediatR(assembler);
         }
-
     }
 }

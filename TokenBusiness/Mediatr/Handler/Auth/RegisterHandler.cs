@@ -1,7 +1,7 @@
-﻿using MediatR;
-using System.Net;
+﻿using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using MediatR;
 using TokenBusiness.Abstract;
 using TokenBusiness.Mediatr.Command.Auth;
 using TokenEntity.ReturnMessage;
@@ -22,9 +22,9 @@ namespace TokenBusiness.Mediatr.Handler.Auth
             var registerResult = await _authService.RegisterAsync(request.UserRegisterDto);
             return registerResult switch
             {
-                > 0 => new MediatrResult((HttpStatusCode)1000, "User registration successful.", "success"),
-                0 => new MediatrResult((HttpStatusCode)1001, "User registration failed.", "error"),
-                _ => new MediatrResult((HttpStatusCode)1001, "There is an error during registration.", "error")
+                > 0 => new MediatrResult((HttpStatusCode) 1000, "User registration successful.", "success"),
+                0 => new MediatrResult((HttpStatusCode) 1001, "User registration failed.", "error"),
+                _ => new MediatrResult((HttpStatusCode) 1001, "There is an error during registration.", "error")
             };
         }
     }

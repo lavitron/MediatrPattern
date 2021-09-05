@@ -5,13 +5,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TokenDAL\TokenDAL.csproj" />
-      <ProjectReference Include="..\TokenEntity\TokenEntity.csproj" />
+        <ProjectReference Include="..\TokenDAL\TokenDAL.csproj"/>
+        <ProjectReference Include="..\TokenEntity\TokenEntity.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3" />
-      <PackageReference Include="MediatR" Version="9.0.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3"/>
+        <PackageReference Include="MediatR" Version="9.0.0"/>
     </ItemGroup>
 
 </Project>

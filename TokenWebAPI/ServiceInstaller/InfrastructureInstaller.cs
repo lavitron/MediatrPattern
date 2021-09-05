@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TokenInfrastructure.DependencyInjection;
+
 namespace TokenWebAPI.ServiceInstaller
 {
     public class InfrastructureInstaller : IInstaller

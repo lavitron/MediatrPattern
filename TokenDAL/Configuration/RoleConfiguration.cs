@@ -12,8 +12,8 @@ namespace TokenDAL.Configuration
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.Name).HasMaxLength(100).IsRequired();
 
-            builder.HasData(new Role { Id = 1, Name = "Admin" });
-            builder.HasData(new Role { Id = 2, Name = "User" });
+            builder.HasData(new Role {Id = 1, Name = "Admin"});
+            builder.HasData(new Role {Id = 2, Name = "User"});
         }
     }
 }

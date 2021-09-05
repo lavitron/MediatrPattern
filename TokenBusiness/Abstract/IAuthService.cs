@@ -9,6 +9,7 @@ namespace TokenBusiness.Abstract
     {
         Task<int> RegisterAsync(UserRegisterDto userRegisterDto);
         Task<User> GetLoginUserAsync(UserLoginDto userLoginDto);
+
         Task<AccessToken> CreateAccessTokenAsync(User user);
         //Not need in an interface
         // Task<IEnumerable<Role>> GetUserRolesByUserIdAsync(int userId);

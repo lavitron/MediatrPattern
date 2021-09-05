@@ -1,5 +1,5 @@
-﻿using Core.Entity.Concrete;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Core.Entity.Concrete;
 
 namespace TokenEntity.Entity
 {

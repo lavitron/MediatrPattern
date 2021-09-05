@@ -11,6 +11,7 @@ namespace TokenBusiness.Mediatr.Query.Auth
         {
             UserLoginDto = userLoginDto;
         }
+
         public UserLoginDto UserLoginDto { get; }
     }
 }
