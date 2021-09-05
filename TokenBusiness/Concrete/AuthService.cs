@@ -25,6 +25,7 @@ namespace TokenBusiness.Concrete
 
         public async Task<int> RegisterAsync(UserRegisterDto userRegisterDto)
         {
+            var currentTime = DateTime.Now;
             HashingHelper.CreatePasswordHash(userRegisterDto.Password, out var passwordHash, out var passwordSalt);
             var user = new User
             {
@@ -34,10 +35,10 @@ namespace TokenBusiness.Concrete
                 Gender = userRegisterDto.Gender,
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt,
-                CDate = DateTime.Now,
+                CDate = currentTime,
                 UserRoles = new List<UserRole>
                 {
-                    new() {RoleId = userRegisterDto.UserRole, CDate = DateTime.Now}
+                    new() {RoleId = userRegisterDto.UserRole, CDate = currentTime}
                 }
             };
             await _context.Users.AddAsync(user);
