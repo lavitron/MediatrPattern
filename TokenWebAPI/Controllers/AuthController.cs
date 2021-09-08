@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TokenBusiness.Mediatr.Command.Auth;
 using TokenBusiness.Mediatr.Query.Auth;
@@ -37,7 +36,7 @@ namespace TokenWebAPI.Controllers
             }
             catch (Exception e)
             {
-                return BadRequest(e.Message);
+                return BadRequest(e.Message + e.InnerException);
             }
         }
 
@@ -55,13 +54,6 @@ namespace TokenWebAPI.Controllers
             {
                 return BadRequest(e.Message + e.InnerException);
             }
-        }
-
-        [Authorize]
-        [HttpGet("GetName")]
-        public ActionResult GetName()
-        {
-            return Ok("Ömer");
         }
     }
 }
